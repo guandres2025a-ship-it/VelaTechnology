@@ -35,6 +35,24 @@ export default function Navbar() {
           ))}
         </div>
 
+        <details className="relative md:hidden">
+          <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-white/15 text-[#E2C783] [&::-webkit-details-marker]:hidden">
+            <span className="text-lg" aria-hidden="true">☰</span>
+            <span className="sr-only">Abrir menú</span>
+          </summary>
+          <div className="absolute right-0 top-14 flex min-w-44 flex-col gap-1 rounded-xl border border-white/10 bg-[#0B1B30]/95 p-2 shadow-2xl backdrop-blur-xl">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-lg px-4 py-3 text-sm text-[#C5D0DD] transition-colors hover:bg-white/5 hover:text-[#E2C783]"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </details>
+
         <a
           href="#contacto"
           className="rounded-full border border-[#C7A45D]/55 px-5 py-2.5 text-[10px] font-semibold tracking-[0.16em] text-[#E2C783] transition duration-300 hover:bg-[#C7A45D] hover:text-[#071426]"
