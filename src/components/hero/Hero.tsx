@@ -6,71 +6,62 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="vela-hero relative isolate flex min-h-[760px] items-center overflow-hidden bg-[#071426] pt-24 sm:min-h-[820px] lg:min-h-[100svh] lg:pt-20"
+      className="vela-hero relative isolate flex min-h-[760px] items-center justify-center overflow-hidden bg-[#071426] px-6 pb-20 pt-32 sm:min-h-[820px] lg:min-h-[100svh] lg:pt-28"
     >
       <Navbar />
       <UniverseCanvas />
 
-      <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_73%_48%,rgba(23,45,73,0.34),transparent_42%),linear-gradient(90deg,rgba(7,20,38,0.98)_0%,rgba(7,20,38,0.92)_36%,rgba(7,20,38,0.30)_72%,rgba(7,20,38,0.12)_100%)]" />
-      <div className="pointer-events-none absolute -left-48 top-1/3 z-[1] h-[460px] w-[460px] rounded-full bg-[#172D49]/25 blur-[130px]" />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(ellipse_at_50%_46%,rgba(23,45,73,0.34),transparent_48%),linear-gradient(180deg,rgba(7,20,38,0.18)_0%,rgba(7,20,38,0.05)_48%,rgba(7,20,38,0.76)_100%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[min(80vw,760px)] w-[min(80vw,760px)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C7A45D]/[0.035] blur-[110px]" />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-8 px-6 pb-20 pt-16 lg:grid-cols-[0.94fr_1.06fr] lg:px-10 lg:pb-16 lg:pt-20">
-        <div className="relative z-20 max-w-[650px]">
-          <div className="vela-reveal vela-reveal-1 mb-8 flex items-center gap-3">
-            <span className="h-px w-9 bg-[#C7A45D]" />
-            <span className="text-[10px] font-semibold tracking-[0.28em] text-[#D8BD80] sm:text-xs">
-              TECNOLOGÍA CON PROPÓSITO
-            </span>
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
+        <div className="vela-hero-constellation pointer-events-none absolute left-1/2 top-1/2 z-0 w-[min(88vw,760px)] -translate-x-1/2 -translate-y-[54%] opacity-80 sm:w-[min(76vw,820px)]">
+          <Constellation />
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center">
+          <div className="vela-reveal vela-reveal-1 mb-7 flex items-center gap-3 text-[9px] font-semibold tracking-[0.34em] text-[#D6B878] sm:text-[10px]">
+            <span className="h-px w-8 bg-[#C7A45D]/70" />
+            THE DIGITAL UNIVERSE
+            <span className="h-px w-8 bg-[#C7A45D]/70" />
           </div>
 
-          <h1 className="vela-reveal vela-reveal-2 max-w-[680px] text-[clamp(2.8rem,6.2vw,5.7rem)] font-medium leading-[1.04] tracking-[-0.055em] text-white">
-            Ideas que encuentran
-            <span className="mt-1 block bg-gradient-to-r from-[#E8D4A5] via-[#C7A45D] to-[#A9BBD0] bg-clip-text text-transparent">
-              su dirección.
-            </span>
-          </h1>
+          <div className="vela-reveal vela-reveal-2 relative">
+            <div className="vela-logo-aura absolute inset-0 -z-10 scale-150 rounded-full bg-[#C7A45D]/[0.10] blur-[55px]" />
+            <div className="flex items-center gap-4 sm:gap-6">
+              <span className="flex h-[58px] w-[58px] items-center justify-center rounded-full border border-[#D6B878]/65 text-3xl font-light text-[#E8D4A5] shadow-[0_0_38px_rgba(199,164,93,0.14)] sm:h-[76px] sm:w-[76px] sm:text-4xl">V</span>
+              <div className="text-left">
+                <h1 className="text-[clamp(3.6rem,10vw,7.8rem)] font-medium leading-[0.82] tracking-[0.12em] text-white">VELA</h1>
+                <p className="mt-3 pl-1 text-[10px] tracking-[0.43em] text-[#D6B878] sm:mt-4 sm:text-xs sm:tracking-[0.58em]">TECHNOLOGIES</p>
+              </div>
+            </div>
+          </div>
 
-          <p className="vela-reveal vela-reveal-3 mt-7 max-w-[510px] text-[15px] leading-8 text-[#AAB8C9] sm:text-base">
-            Diseñamos y desarrollamos soluciones tecnológicas que conectan ideas,
-            resuelven problemas y ayudan a las empresas a crecer.
+          <p className="vela-reveal vela-reveal-3 mt-10 max-w-2xl text-base leading-8 text-[#C0CBD8] sm:mt-12 sm:text-lg sm:leading-9">
+            Conectamos ideas, tecnología y creatividad para abrir nuevas posibilidades.
           </p>
 
-          <div className="vela-reveal vela-reveal-4 mt-9 flex flex-wrap items-center gap-4">
+          <div className="vela-reveal vela-reveal-4 mt-9 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:gap-4">
             <a
               href="#servicios"
-              className="group inline-flex min-h-12 items-center gap-3 rounded-full bg-[#C7A45D] px-6 py-3 text-[11px] font-bold tracking-[0.08em] text-[#071426] shadow-[0_8px_35px_rgba(199,164,93,0.15)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#E0C78F] hover:shadow-[0_10px_42px_rgba(199,164,93,0.25)]"
+              className="group inline-flex min-h-14 w-full items-center justify-center gap-4 rounded-full bg-[#D6B878] px-8 text-[10px] font-bold tracking-[0.16em] text-[#071426] shadow-[0_8px_40px_rgba(199,164,93,0.18)] transition duration-300 hover:-translate-y-1 hover:bg-[#E8D4A5] hover:shadow-[0_12px_48px_rgba(199,164,93,0.28)] sm:w-auto"
             >
-              EXPLORAR SOLUCIONES
-              <span className="text-base transition-transform group-hover:translate-x-1" aria-hidden="true">→</span>
+              EXPLORA SOLUCIONES
+              <span className="text-base transition-transform group-hover:translate-x-1" aria-hidden="true">↗</span>
             </a>
             <a
               href="#nosotros"
-              className="inline-flex min-h-12 items-center rounded-full border border-white/20 px-6 py-3 text-[11px] font-semibold tracking-[0.08em] text-[#E0E7EF] transition duration-300 hover:border-[#C7A45D]/70 hover:text-[#E2C783]"
+              className="inline-flex min-h-14 w-full items-center justify-center rounded-full border border-white/25 bg-[#071426]/35 px-8 text-[10px] font-semibold tracking-[0.16em] text-[#E8EDF4] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#D6B878]/70 hover:text-[#E8D4A5] sm:w-auto"
             >
-              CONOCE VELA
+              CONOCE A VELA
             </a>
-          </div>
-
-          <p className="vela-reveal vela-reveal-5 mt-12 text-[9px] font-medium tracking-[0.34em] text-[#71849B] sm:text-[10px]">
-            INNOVATION <span className="mx-2 text-[#C7A45D]">·</span> DIRECTION <span className="mx-2 text-[#C7A45D]">·</span> GROWTH
-          </p>
-        </div>
-
-        <div className="relative z-10 mx-auto flex h-[330px] w-full max-w-[590px] items-center justify-center sm:h-[430px] lg:h-[570px]">
-          <div className="absolute inset-[10%] rounded-full border border-[#C7A45D]/[0.10] [transform:rotate(-24deg)_scaleY(.56)]" />
-          <div className="absolute inset-[18%] rounded-full border border-[#C7A45D]/[0.13] [transform:rotate(28deg)_scaleY(.62)]" />
-          <div className="absolute inset-[26%] rounded-full border border-[#A9BBD0]/[0.10] [transform:rotate(-8deg)_scaleY(.7)]" />
-          <div className="absolute h-[52%] w-[52%] rounded-full bg-[#C7A45D]/[0.055] blur-[65px]" />
-          <Constellation />
-          <div className="absolute bottom-[8%] right-[4%] hidden rounded-full border border-white/10 bg-[#0B1B30]/75 px-4 py-2.5 text-[9px] tracking-[0.2em] text-[#9AABC0] backdrop-blur-md sm:block">
-            VELA <span className="text-[#C7A45D]">·</span> DIGITAL UNIVERSE
           </div>
         </div>
       </div>
 
-      <div className="pointer-events-none absolute bottom-7 left-1/2 z-10 hidden -translate-x-1/2 items-center gap-3 text-[9px] tracking-[0.25em] text-[#71849B] lg:flex">
-        <span className="h-8 w-px bg-gradient-to-b from-[#C7A45D]/70 to-transparent" />
-        SCROLL TO EXPLORE
+      <div className="pointer-events-none absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 text-[9px] tracking-[0.25em] text-[#71849B] lg:flex">
+        <span className="h-9 w-px bg-gradient-to-b from-[#C7A45D]/70 to-transparent" />
+        DESCUBRE EL UNIVERSO VELA
       </div>
     </section>
   );
